@@ -10,7 +10,7 @@ public class Principal {
 
         while (quantidadeHerois < 20) {
 
-            System.out.println("\n=== CADASTRO DE HERÓI ===");
+            System.out.println("--- CADASTRO DE HERÓI ---");
 
             System.out.print("Nome: ");
             String nome = scanner.nextLine();
@@ -45,6 +45,14 @@ public class Principal {
             if (resposta.equalsIgnoreCase("n")) {
                 break;
             }
+        }
+        System.out.println("--- HERÓIS CADASTRADOS ---");
+
+        for (int i = 0; i < quantidadeHerois; i++) {
+
+            System.out.println("\nHerói " + (i + 1));
+
+            herois[i].exibirDados();
         }
     }
 }
