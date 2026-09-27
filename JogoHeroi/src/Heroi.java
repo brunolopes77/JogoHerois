@@ -2,14 +2,12 @@ public abstract class Heroi{
     private String nome;
     private int nivel;
     private int vida;
-    private int mana;
     private String classe;
 
-    public Heroi(String nome, int nivel, int vida, int mana, String classe) {
+    public Heroi(String nome, int nivel, int vida, String classe) {
         this.nome = nome;
         this.nivel = nivel;
         this.vida = vida;
-        this.mana = mana;
         this.classe = classe;
     }
 
@@ -37,13 +35,7 @@ public abstract class Heroi{
         this.vida = vida;
     }
 
-    public int getMana() {
-        return mana;
-    }
 
-    public void setMana(int mana) {
-        this.mana = mana;
-    }
 
     public String getClasse() {
         return classe;
@@ -57,7 +49,6 @@ public abstract class Heroi{
         System.out.println("Nome: " + nome);
         System.out.println("Nível: " + nivel);
         System.out.println("Vida: " + vida);
-        System.out.println("Mana: " + mana);
         System.out.println("Classe: " + classe);
     }
 }

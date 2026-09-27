@@ -5,54 +5,55 @@ public class Principal {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        Heroi[] herois = new Heroi[20];
-        int quantidadeHerois = 0;
 
-        while (quantidadeHerois < 20) {
+        FuncMenu funcMenu = new FuncMenu();
 
-            System.out.println("--- CADASTRO DE HERÓI ---");
+        int opcao;
 
-            System.out.print("Nome: ");
-            String nome = scanner.nextLine();
+        do {
 
-            System.out.print("Nível: ");
-            int nivel = scanner.nextInt();
+            System.out.println("\n===== ACADEMIA DE HERÓIS =====");
+            System.out.println("1. Cadastrar herói");
+            System.out.println("2. Listar heróis");
+            System.out.println("3. Buscar herói pelo nome");
+            System.out.println("4. Exibir estatísticas gerais");
+            System.out.println("0. Sair");
+            System.out.print("Escolha uma opção: ");
 
-            System.out.print("Vida: ");
-            int vida = scanner.nextInt();
-
-            System.out.print("Mana: ");
-            int mana = scanner.nextInt();
-
+            opcao = scanner.nextInt();
             scanner.nextLine();
 
-            System.out.print("Classe: ");
-            String classe = scanner.nextLine();
+            switch (opcao) {
 
-            herois[quantidadeHerois] = new Heroi(
-                    nome,
-                    nivel,
-                    vida,
-                    mana,
-                    classe
-            );
+                case 1:
+                    funcMenu.cadastrarHeroi(scanner);
+                    break;
 
-            quantidadeHerois++;
+                case 2:
+                    funcMenu.listarHerois();
+                    break;
 
-            System.out.print("\nDeseja cadastrar outro herói? (s/n): ");
-            String resposta = scanner.nextLine();
+                case 3:
+                    System.out.print("Digite o nome do herói: ");
+                    String nome = scanner.nextLine();
 
-            if (resposta.equalsIgnoreCase("n")) {
-                break;
+                    funcMenu.buscarHeroi(nome);
+                    break;
+
+                case 4:
+                    // Vamos colocar as estatísticas aqui depois
+                    break;
+
+                case 0:
+                    System.out.println("Programa encerrado.");
+                    break;
+
+                default:
+                    System.out.println("Opção inválida.");
             }
-        }
-        System.out.println("--- HERÓIS CADASTRADOS ---");
 
-        for (int i = 0; i < quantidadeHerois; i++) {
+        } while (opcao != 0);
 
-            System.out.println("\nHerói " + (i + 1));
-
-            herois[i].exibirDados();
-        }
+        scanner.close();
     }
 }

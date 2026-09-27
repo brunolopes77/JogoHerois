@@ -7,7 +7,7 @@ public class Guerreiro extends Heroi {
     public Guerreiro(String nome, int nivel, int vida,
                      int forca, int resistencia, int energia) {
 
-        super(nome, nivel, vida);
+        super(nome, nivel, vida,"Guerreiro");
 
         this.forca = forca;
         this.resistencia = resistencia;
