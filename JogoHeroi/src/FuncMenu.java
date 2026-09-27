@@ -134,5 +134,54 @@ public class FuncMenu {
 
         System.out.println("Herói não encontrado.");
     }
+
+    public void exibirRelatorio() {
+
+        if (quantidadeHerois == 0) {
+            System.out.println("\nNenhum herói cadastrado.");
+            return;
+        }
+
+        int quantidadeGuerreiros = 0;
+        int quantidadeMagos = 0;
+        int quantidadeArqueiros = 0;
+
+        int somaNiveis = 0;
+
+        Heroi heroiMaisForte = herois[0];
+
+        for (int i = 0; i < quantidadeHerois; i++) {
+
+            Heroi heroi = herois[i];
+
+            if (heroi instanceof Guerreiro) {
+                quantidadeGuerreiros++;
+            }
+
+            if (heroi instanceof Mago) {
+                quantidadeMagos++;
+            }
+
+            if (heroi instanceof Arqueiro) {
+                quantidadeArqueiros++;
+            }
+
+            somaNiveis += heroi.getNivel();
+
+            if (heroi.getNivel() > heroiMaisForte.getNivel()) {
+                heroiMaisForte = heroi;
+            }
+        }
+
+        double mediaNivel = (double) somaNiveis / quantidadeHerois;
+
+        System.out.println("\n========= RELATÓRIO =========");
+        System.out.println("Total de Heróis: " + quantidadeHerois);
+        System.out.println("Quantidade de Guerreiros: " + quantidadeGuerreiros);
+        System.out.println("Quantidade de Magos: " + quantidadeMagos);
+        System.out.println("Quantidade de Arqueiros: " + quantidadeArqueiros);
+        System.out.println("Média de nível: " + mediaNivel);
+        System.out.println("Herói mais forte: " + heroiMaisForte.getNome());
+    }
 }
 

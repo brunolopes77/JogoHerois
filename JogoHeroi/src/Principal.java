@@ -16,7 +16,7 @@ public class Principal {
             System.out.println("1. Cadastrar herói");
             System.out.println("2. Listar heróis");
             System.out.println("3. Buscar herói pelo nome");
-            System.out.println("4. Exibir estatísticas gerais");
+            System.out.println("4. Relatório");
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
 
@@ -41,7 +41,7 @@ public class Principal {
                     break;
 
                 case 4:
-                    // Vamos colocar as estatísticas aqui depois
+                     funcMenu.exibirRelatorio();
                     break;
 
                 case 0:
