@@ -1,3 +1,5 @@
+package Heroi;
+
 public abstract class Heroi{
     private String nome;
     private int nivel;

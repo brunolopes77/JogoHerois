@@ -1,3 +1,7 @@
+package FuncionalidadeDoMenu;
+
+import Heroi.Heroi;
+
 import java.util.Scanner;
 
 public class FuncMenu {
@@ -29,9 +33,9 @@ public class FuncMenu {
         int vida = scanner.nextInt();
 
         System.out.println("\nEscolha a classe:");
-        System.out.println("1. Guerreiro");
-        System.out.println("2. Mago");
-        System.out.println("3. Arqueiro");
+        System.out.println("1. Heroi.Guerreiro");
+        System.out.println("2. Heroi.Mago");
+        System.out.println("3. Heroi.Arqueiro");
         System.out.print("Opção: ");
 
         int classe = scanner.nextInt();
@@ -54,7 +58,7 @@ public class FuncMenu {
 
                 quantidadeHerois++;
 
-                System.out.println("Guerreiro cadastrado!");
+                System.out.println("Heroi.Guerreiro cadastrado!");
                 break;
 
             case 2:
@@ -73,7 +77,7 @@ public class FuncMenu {
 
                 quantidadeHerois++;
 
-                System.out.println("Mago cadastrado!");
+                System.out.println("Heroi.Mago cadastrado!");
                 break;
 
             case 3:
@@ -92,7 +96,7 @@ public class FuncMenu {
 
                 quantidadeHerois++;
 
-                System.out.println("Arqueiro cadastrado!");
+                System.out.println("Heroi.Arqueiro cadastrado!");
                 break;
 
             default:

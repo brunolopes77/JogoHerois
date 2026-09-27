@@ -1,3 +1,5 @@
+package Heroi;
+
 public class Arqueiro extends Heroi {
 
     private int precisao;
@@ -7,7 +9,7 @@ public class Arqueiro extends Heroi {
     public Arqueiro(String nome, int nivel, int vida,
                     int precisao, int agilidade, int concentracao) {
 
-        super(nome, nivel, vida,"Arqueiro");
+        super(nome, nivel, vida,"Heroi.Arqueiro");
 
         this.precisao = precisao;
         this.agilidade = agilidade;

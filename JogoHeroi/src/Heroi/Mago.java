@@ -1,3 +1,5 @@
+package Heroi;
+
 public class Mago extends Heroi {
 
     private int mana;
@@ -7,7 +9,7 @@ public class Mago extends Heroi {
     public Mago(String nome, int nivel, int vida,
                 int mana, int poderMagico, int inteligencia) {
 
-        super(nome, nivel, vida,"Mago");
+        super(nome, nivel, vida,"Heroi.Mago");
 
         this.mana = mana;
         this.poderMagico = poderMagico;

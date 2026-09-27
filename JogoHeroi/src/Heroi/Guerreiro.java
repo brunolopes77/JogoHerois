@@ -1,3 +1,5 @@
+package Heroi;
+
 public class Guerreiro extends Heroi {
 
     private int forca;
@@ -7,7 +9,7 @@ public class Guerreiro extends Heroi {
     public Guerreiro(String nome, int nivel, int vida,
                      int forca, int resistencia, int energia) {
 
-        super(nome, nivel, vida,"Guerreiro");
+        super(nome, nivel, vida,"Heroi.Guerreiro");
 
         this.forca = forca;
         this.resistencia = resistencia;

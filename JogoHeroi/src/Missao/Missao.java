@@ -1,3 +1,7 @@
+package Missao;
+
+import Heroi.Heroi;
+
 public class Missao {
 
     private String nome;
