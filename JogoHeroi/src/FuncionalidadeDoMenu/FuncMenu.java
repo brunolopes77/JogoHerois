@@ -1,6 +1,9 @@
 package FuncionalidadeDoMenu;
 
 import Heroi.Heroi;
+import Heroi.Arqueiro;
+import Heroi.Guerreiro;
+import Heroi.Mago;
 
 import java.util.Scanner;
 
@@ -187,5 +190,6 @@ public class FuncMenu {
         System.out.println("Média de nível: " + mediaNivel);
         System.out.println("Herói mais forte: " + heroiMaisForte.getNome());
     }
+
 }
 

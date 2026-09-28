@@ -7,7 +7,7 @@ public class Missao {
     private String nome;
     private int dificuldade;
     private int recompensaOuro;
-    private Heroi heroi;
+    private String heroi;
     private boolean iniciada;
     private boolean concluida;
 
@@ -43,11 +43,11 @@ public class Missao {
         this.recompensaOuro = recompensaOuro;
     }
 
-    public Heroi getHeroi() {
+    public String getHeroiMissao() {
         return heroi;
     }
 
-    public void setHeroi(Heroi heroi) {
+    public void setHeroiMissao(String heroi) {
         this.heroi = heroi;
     }
 
@@ -67,7 +67,7 @@ public class Missao {
 
         iniciada = true;
         System.out.println("A missão '" + nome + "' foi iniciada pelo herói "
-                + heroi.getNome() + "!");
+                + getHeroiMissao() + "!");
     }
 
     public void concluirMissao() {
